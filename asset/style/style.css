@@ -35,8 +35,8 @@
     font-size: 1.1rem;
     transition: color 0.3s ease;
   }
-  header .nav-list li a:hover {
-    color: rgba(255, 255, 255, 0.8);
+  header .nav-list li a i {
+    font-size: 2rem;
   }
   header .nav-list li a img {
     width: 3.5rem;
@@ -49,15 +49,40 @@
     width: 4rem;
     height: 4rem;
   }
+  div#txt-head {
+    text-align: center;
+    font-family: "Inknut Antiqua", serif;
+    color: white;
+  }
   div#txt-head p {
     position: absolute;
     top: 25%;
     left: 50%;
     transform: translateX(-50%);
-    font-family: "Inknut Antiqua", serif;
-    color: white;
     font-size: 1.5rem;
     text-align: center;
+  }
+  div#txt-head h2 {
+    padding: 1rem 0;
+  }
+  .caroussel div.img-bkd {
+    overflow: hidden;
+    position: absolute;
+    transform: scaleX(-1);
+    top: 30%;
+    right: 10%;
+  }
+  .caroussel div.img-bkd img {
+    width: 60%;
+  }
+  .caroussel div.img-bkg {
+    overflow: hidden;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+  }
+  .caroussel div.img-bkg img {
+    width: 60%;
   }
   .caroussel div#text-caroussel {
     top: 45%;
@@ -111,6 +136,181 @@
   }
   div#arrow-right.arrow-right-desk {
     right: 25%;
+  }
+  section#price-list {
+    min-height: 100vh;
+    padding: 2rem 11rem;
+  }
+  section#price-list div.logo img {
+    width: 5rem;
+  }
+  section#price-list div#title-price {
+    text-align: center;
+    color: white;
+  }
+  section#price-list div#title-price h1 {
+    font-family: "Inknut Antiqua", serif;
+    font-size: 2rem;
+  }
+  section#price-list div#title-price p {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  section#price-list div.price-card {
+    flex-direction: row;
+    width: -moz-fit-content;
+    width: fit-content;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+  section#price-list div.price-card div.card {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 11rem;
+    height: 30rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #0c0211 0%, #9b19e7 100%);
+  }
+  section#price-list div.price-card div.card:nth-child(2) {
+    height: 35rem;
+    margin-bottom: 0.5rem;
+  }
+  section#price-list div.price-card div.card h2 {
+    font-family: "Inknut Antiqua", serif;
+    font-size: 1.8rem;
+  }
+  section#price-list div.price-card div.card p {
+    font-size: 1.2rem;
+  }
+  main#contact div#flex-contact {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  main#contact div#flex-contact section#contact-form {
+    width: 30rem;
+  }
+  main#contact div#flex-contact section#contact-form form {
+    font-family: "Inknut Antiqua", serif;
+    align-items: center;
+  }
+  main#contact div#flex-contact section#contact-form form label {
+    font-size: 1.4rem;
+    color: white;
+  }
+  main#contact div#flex-contact section#contact-form form input,
+  main#contact div#flex-contact section#contact-form form select,
+  main#contact div#flex-contact section#contact-form form textarea {
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    margin: 0.2rem;
+    padding: 0.2rem 2rem;
+  }
+  main#contact div#flex-contact section#contact-form form div.input-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  main#contact div#flex-contact section#contact-form form button {
+    width: 10rem;
+    font-family: "Inknut Antiqua", serif;
+    background-color: black;
+    color: white;
+    padding: 0rem 1rem;
+    border: 4px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, #f093fb, #f5576c, #4facfe, #43e97b);
+    cursor: pointer;
+    transition: background 0.5s ease, color 0.5s ease;
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin: 1rem auto;
+  }
+  main#contact div#flex-contact section#contact-form form button:hover {
+    background: linear-gradient(45deg, #f093fb, #f5576c, #4facfe, #43e97b);
+    color: black;
+  }
+  main#contact div#flex-contact div.menu {
+    z-index: 5;
+    position: absolute;
+    top: 65%;
+    left: 61%;
+  }
+  main#contact div#flex-contact div.toggle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5rem;
+    height: 5rem;
+    background: #333;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.5s;
+  }
+  main#contact div#flex-contact .social-links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5rem;
+    height: 5rem;
+    transform: translate(-50%, -50%);
+  }
+  main#contact div#flex-contact .social-links li {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(calc(90deg * var(--i))) translateX(80px);
+    transform-origin: 0 0; /* point de rotation au centre exact du bouton */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+  }
+  main#contact div#flex-contact .menu.active .social-links li {
+    transform: rotate(calc(90deg * var(--i))) translateX(80px);
+    opacity: 1;
+  }
+  main#contact div#flex-contact .social-links li a {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+  }
+  main#contact div#flex-contact div#contact-infos {
+    position: relative;
+    width: 50rem;
+  }
+  main#contact div#flex-contact div#contact-infos img#appareil-photo {
+    position: absolute;
+    top: 4%;
+    left: 60%;
+    transform: translateX(-50%);
+    width: 30rem;
+    height: 30rem;
+    border-radius: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main#contact div#flex-contact div#contact-infos iframe#map {
+    z-index: 1;
+    position: absolute;
+    border-radius: 20px;
+    width: 15rem;
+    height: 15rem;
+    left: 60%;
+    top: -15%;
   }
 }
 @media (min-width: 1920px) {
@@ -171,8 +371,12 @@
   height: 100vh;
 }
 
+.englob {
+  background: radial-gradient(circle, rgb(210, 191, 235) 0%, #a94ddf 100%);
+}
+
 header {
-  background: radial-gradient(circle, #cfb9ea 0%, #9b19e7 100%);
+  border-bottom: rgba(51, 51, 51, 0.1529411765) solid 1px;
   overflow-x: hidden;
   transition: background-color 0.5s ease;
 }
@@ -190,6 +394,14 @@ header .nav-list {
 header .nav-list li a {
   color: white;
 }
+header .nav-list li a:hover i {
+  color: rgba(170, 77, 223, 0.6235294118);
+}
+header .nav-list li a i {
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  color: white;
+}
 header .nav-list li a img {
   width: 3rem;
   -o-object-fit: cover;
@@ -201,19 +413,23 @@ header .nav-list li a img#profile {
   border-radius: 50%;
 }
 
+#txt-head {
+  text-align: center;
+  font-family: "Inknut Antiqua", serif;
+  color: white;
+}
 #txt-head p {
   position: absolute;
   top: 25%;
   left: 50%;
   transform: translateX(-50%);
-  font-family: "Inknut Antiqua", serif;
-  color: white;
   font-size: 0.9rem;
-  text-align: center;
+}
+#txt-head h2 {
+  padding: 1rem 0;
 }
 
 .caroussel {
-  background: radial-gradient(circle, rgb(249, 246, 253) 0%, #a94ddf 100%);
   position: relative;
   min-height: 100vh;
   transition: background-color 0.5s ease;
@@ -358,6 +574,228 @@ figure .image-wrapper img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+}
+
+#price-list {
+  background: radial-gradient(circle, rgb(210, 191, 235) 0%, #a94ddf 100%);
+  min-height: 100vh;
+  padding: 1rem;
+}
+#price-list .logo img {
+  width: 3rem;
+  height: auto;
+}
+#price-list #title-price {
+  text-align: center;
+  color: white;
+}
+#price-list #title-price h1 {
+  font-family: "Inknut Antiqua", serif;
+  font-size: 2rem;
+}
+#price-list #title-price p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+#price-list .price-card {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  color: white;
+}
+#price-list .price-card .card {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 10rem;
+  height: 30rem;
+  border: 2px solid white;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #0c0211 0%, #9b19e7 100%);
+}
+#price-list .price-card .card h2 {
+  font-family: "Inknut Antiqua", serif;
+  font-size: 1.5rem;
+}
+#price-list .price-card .card .price {
+  position: relative;
+}
+#price-list .price-card .card .price img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9rem;
+}
+#price-list .price-card .card .price p {
+  position: relative;
+}
+#price-list .price-card .card button {
+  font-family: "Inknut Antiqua", serif;
+  font-size: 1.1rem;
+  align-self: center;
+  background-color: black;
+  color: white;
+  width: 90%;
+  padding: 0rem 1rem;
+  border: 4px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #f093fb, #f5576c, #4facfe, #43e97b);
+  cursor: pointer;
+  transition: background 0.5s ease, color 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+#price-list .price-card .card button:hover {
+  background: linear-gradient(45deg, #f093fb, #f5576c, #4facfe, #43e97b);
+  color: black;
+}
+
+#contact {
+  min-height: 100vh;
+}
+#contact #flex-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#contact #flex-contact #contact-form {
+  width: 20rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+#contact #flex-contact #contact-form form {
+  font-family: "Inknut Antiqua", serif;
+  align-items: center;
+}
+#contact #flex-contact #contact-form form label {
+  color: white;
+  text-transform: capitalize;
+}
+#contact #flex-contact #contact-form form select,
+#contact #flex-contact #contact-form form textarea {
+  cursor: pointer;
+}
+#contact #flex-contact #contact-form form input,
+#contact #flex-contact #contact-form form select,
+#contact #flex-contact #contact-form form textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: black;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+#contact #flex-contact #contact-form form .input-container {
+  display: flex;
+  justify-content: space-between;
+}
+#contact #flex-contact #contact-form form button {
+  width: 10rem;
+  font-family: "Inknut Antiqua", serif;
+  background-color: black;
+  color: white;
+  padding: 0rem 1rem;
+  border: 4px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #f093fb, #f5576c, #4facfe, #43e97b);
+  cursor: pointer;
+  transition: background 0.5s ease, color 0.5s ease;
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 1rem auto;
+}
+#contact #flex-contact #contact-form form button:hover {
+  background: linear-gradient(45deg, #f093fb, #f5576c, #4facfe, #43e97b);
+  color: black;
+}
+#contact #flex-contact .menu {
+  z-index: 5;
+  position: absolute;
+  top: 70%;
+  left: 20%;
+}
+#contact #flex-contact .toggle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #333;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.5s;
+}
+#contact #flex-contact .social-links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+#contact #flex-contact .social-links li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotate(calc(90deg * var(--i))) translateX(80px);
+  transform-origin: 25px 25px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+#contact #flex-contact .menu.active .social-links li {
+  transform: rotate(calc(90deg * var(--i))) translateX(80px) scale(1);
+  opacity: 1;
+}
+#contact #flex-contact .social-links li a {
+  width: 3rem;
+  height: 3rem;
+  background: rgba(0, 0, 0, 0.308);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+#contact #flex-contact #contact-infos {
+  position: relative;
+  min-height: 100vh;
+}
+#contact #flex-contact #contact-infos #appareil-photo {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18rem;
+  height: 18rem;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#contact #flex-contact #contact-infos #map {
+  z-index: 1;
+  position: absolute;
+  border-radius: 20px;
+  width: 10rem;
+  height: 10rem;
+  right: 5%;
+  top: 10%;
 }
 
 @keyframes spinOut {

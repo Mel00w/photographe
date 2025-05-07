@@ -31,20 +31,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Liste des couleurs de fond pour chaque image
   const backgroundColors = [
-    "radial-gradient(circle, rgb(220, 205, 240) 0%,#a94ddf 100%)",
+    "radial-gradient(circle, rgb(210, 191, 235) 0%,#a94ddf 100%)",
     "radial-gradient(circle,rgb(196, 214, 240) 0%,rgb(114, 169, 247) 100%)",
     "radial-gradient(circle,rgb(238, 174, 150) 0%, #FF7D4D 100%)",
-    "radial-gradient(circle, #FFCC92 0%, #FF8900 100%)",
     "radial-gradient(circle,rgb(185, 183, 128) 0%,rgb(177, 170, 39) 100%)",
+    "radial-gradient(circle, #FFCC92 0%, #FF8900 100%)",
   ];
 
   // Liste des images de fond pour chaque slide
   const backgroundImages = [
     "./asset/img/parapluie.png",
-    "./asset/img/bulle.png",
+    "./asset/img/bubble.png",
     "./asset/img/plume.png",
     "./asset/img/etoile.png",
-    "./asset/img/fleur.png"
+    "./asset/img/flower.png"
   ];
 
   // Fonction pour mettre à jour l'image active, les cercles visibles et la couleur de fond

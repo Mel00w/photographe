@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 * {
   margin: 0;
@@ -34,8 +34,8 @@
         a {
           font-size: 1.1rem;
           transition: color 0.3s ease;
-          &:hover {
-            color: rgba(255, 255, 255, 0.8);
+          i{
+            font-size: 2rem;
           }
           img {
             width: 3.5rem;
@@ -53,18 +53,41 @@
     }
   }
   div#txt-head {
-    p{
+    text-align: center;
+    font-family: "Inknut Antiqua", serif;
+    color: white;
+    p {
       position: absolute;
       top: 25%;
       left: 50%;
       transform: translateX(-50%);
-      font-family: "Inknut Antiqua", serif;
-      color: white;
       font-size: 1.5rem;
       text-align: center;
     }
+    h2 {
+      padding: 1rem 0;
+    }
   }
   .caroussel {
+    div.img-bkd {
+      overflow: hidden;
+      position: absolute;
+      transform: scaleX(-1);
+      top: 30%;
+      right: 10%;
+      img {
+        width: 60%;
+      }
+    }
+    div.img-bkg {
+      overflow: hidden;
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      img {
+        width: 60%;
+      }
+    }
     div#text-caroussel {
       top: 45%;
       left: 50%;
@@ -80,30 +103,30 @@
       }
     }
     div#circle_point {
-    z-index: 0;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 3px solid white;
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
-    #circle3 {
-      top: 5%;
-      left: 75%;
-    }
-    #circle1 {
-      top: 42%;
-      left: -4%;
-    }
-    #circle4 {
-      top: 47%;
-      right: -4.5%;
-    }
-    #circle2 {
-      top: 4%;
-      left: 18%;
-    }
+      z-index: 0;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 3px solid white;
+      width: 25rem;
+      height: 25rem;
+      border-radius: 50%;
+      #circle3 {
+        top: 5%;
+        left: 75%;
+      }
+      #circle1 {
+        top: 42%;
+        left: -4%;
+      }
+      #circle4 {
+        top: 47%;
+        right: -4.5%;
+      }
+      #circle2 {
+        top: 4%;
+        left: 18%;
+      }
     }
   }
   div#circle.circle_desktop {
@@ -118,6 +141,204 @@
   }
   div#arrow-right.arrow-right-desk {
     right: 25%;
+  }
+  section#price-list {
+    min-height: 100vh;
+    padding: 2rem 11rem;
+    div.logo {
+      img {
+        width: 5rem;
+      }
+    }
+    div#title-price {
+      text-align: center;
+      color: white;
+      h1 {
+        font-family: "Inknut Antiqua", serif;
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+    }
+    div.price-card {
+      flex-direction: row;
+      width: fit-content;
+      align-items: flex-end;
+      gap: 2rem;
+
+      div.card {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 11rem;
+        height: 30rem;
+        border: 2px solid white;
+        border-radius: 5px;
+        background: linear-gradient(to bottom, #0c0211 0%, #9b19e7 100%);
+        &:nth-child(2) {
+          height: 35rem;
+          margin-bottom: 0.5rem;
+        }
+        h2 {
+          font-family: "Inknut Antiqua", serif;
+          font-size: 1.8rem;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  //CONTACT PAGE
+  main#contact {
+    div#flex-contact {
+      margin-top: 5rem;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      section#contact-form {
+        width: 30rem;
+        form {
+          font-family: "Inknut Antiqua", serif;
+          align-items: center;
+          label {
+            font-size: 1.4rem;
+            color: white;
+          }
+          input,
+          select,
+          textarea {
+            font-size: 1rem;
+            border-radius: 5px;
+            border: none;
+            margin: 0.2rem;
+            padding: 0.2rem 2rem;
+          }
+          div.input-container {
+            display: flex;
+            justify-content: space-between;
+          }
+          button {
+            width: 10rem;
+            font-family: "Inknut Antiqua", serif;
+            background-color: black;
+            color: white;
+            padding: 0rem 1rem;
+            border: 4px solid;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(
+              45deg,
+              #f093fb,
+              #f5576c,
+              #4facfe,
+              #43e97b
+            );
+            cursor: pointer;
+            transition: background 0.5s ease, color 0.5s ease;
+            position: relative;
+            z-index: 1;
+            display: block;
+            margin: 1rem auto;
+          }
+
+          button:hover {
+            background: linear-gradient(
+              45deg,
+              #f093fb,
+              #f5576c,
+              #4facfe,
+              #43e97b
+            );
+            color: black;
+          }
+        }
+      }
+      div.menu {
+        z-index: 5;
+        position: absolute;
+        top: 65%;
+        left: 61%;
+      }
+
+      div.toggle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 5rem;
+        height: 5rem;
+        background: #333;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        transition: transform 0.5s;
+      }
+
+      .social-links {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5rem;
+        height: 5rem;
+        transform: translate(-50%, -50%);
+      }
+
+      .social-links li {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: rotate(calc(90deg * var(--i))) translateX(80px);
+        transform-origin: 0 0; /* point de rotation au centre exact du bouton */
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        opacity: 0;
+      }
+
+      .menu.active .social-links li {
+        transform: rotate(calc(90deg * var(--i))) translateX(80px);
+        opacity: 1;
+      }
+
+      .social-links li a {
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        text-decoration: none;
+      }
+      div#contact-infos {
+        position: relative;
+        width: 50rem;
+        img#appareil-photo {
+          position: absolute;
+          top: 4%;
+          left: 60%;
+          transform: translateX(-50%);
+          width: 30rem;
+          height: 30rem;
+          border-radius: 100%;
+          object-fit: cover;
+        }
+        iframe#map {
+          z-index: 1;
+          position: absolute;
+          border-radius: 20px;
+          width: 15rem;
+          height: 15rem;
+          left: 60%;
+          top: -15%;
+        }
+      }
+    }
   }
 }
 
@@ -164,22 +385,22 @@
       border-radius: 50%;
     }
     div#circle_point {
-        #circle3 {
-    top: 5%;
-    left: 75%;
-  }
-  #circle1 {
-    top: 45%;
-    left: -3.5%;
-  }
-  #circle4 {
-    top: 50%;
-    left: 97%;
-  }
-  #circle2 {
-    top: 6%;
-    left: 18%;
-  }
+      #circle3 {
+        top: 5%;
+        left: 75%;
+      }
+      #circle1 {
+        top: 45%;
+        left: -3.5%;
+      }
+      #circle4 {
+        top: 50%;
+        left: 97%;
+      }
+      #circle2 {
+        top: 6%;
+        left: 18%;
+      }
     }
   }
 }
@@ -187,9 +408,11 @@
 #homepage {
   height: 100vh;
 }
-
+.englob{
+  background: radial-gradient(circle, rgb(210, 191, 235) 0%, #a94ddf 100%);
+}
 header {
-  background: radial-gradient(circle, #cfb9ea 0%, #9b19e7 100%);
+  border-bottom: #33333327 solid 1px;
   overflow-x: hidden;
   transition: background-color 0.5s ease;
   .navbar {
@@ -205,6 +428,14 @@ header {
     li {
       a {
         color: white;
+        &:hover i{
+          color: #aa4ddf9f;
+        }
+        i{
+          transition: all 0.3s ease;
+          font-size: 1.5rem;
+          color: white;
+        }
         img {
           width: 3rem;
           object-fit: cover;
@@ -220,19 +451,21 @@ header {
 }
 
 #txt-head {
-  p{
+  text-align: center;
+  font-family: "Inknut Antiqua", serif;
+  color: white;
+  p {
     position: absolute;
     top: 25%;
     left: 50%;
     transform: translateX(-50%);
-    font-family: "Inknut Antiqua", serif;
-    color: white;
-    font-size: .9rem;
-    text-align: center;
+    font-size: 0.9rem;
+  }
+  h2 {
+    padding: 1rem 0;
   }
 }
 .caroussel {
-  background: radial-gradient(circle, rgb(249, 246, 253) 0%, #a94ddf 100%);
   position: relative;
   min-height: 100vh;
   transition: background-color 0.5s ease;
@@ -322,7 +555,7 @@ header {
       }
     }
     #circle3 {
-      top:1%;
+      top: 1%;
       left: 70%;
     }
     #circle1 {
@@ -338,7 +571,6 @@ header {
       left: 18%;
     }
   }
-
 }
 
 figure {
@@ -379,6 +611,254 @@ figure {
       height: 100%;
       object-fit: cover;
       border-radius: 50%;
+    }
+  }
+}
+
+#price-list {
+  background: radial-gradient(circle, rgb(210, 191, 235) 0%, #a94ddf 100%);
+  min-height: 100vh;
+  padding: 1rem;
+  .logo {
+    img {
+      width: 3rem;
+      height: auto;
+    }
+  }
+  #title-price {
+    text-align: center;
+    color: white;
+    h1 {
+      font-family: "Inknut Antiqua", serif;
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+  .price-card {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    color: white;
+    .card {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 10rem;
+      height: 30rem;
+      border: 2px solid white;
+      border-radius: 5px;
+      background: linear-gradient(to bottom, #0c0211 0%, #9b19e7 100%);
+      h2 {
+        font-family: "Inknut Antiqua", serif;
+        font-size: 1.5rem;
+      }
+      .price {
+        position: relative;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 9rem;
+        }
+        p {
+          position: relative;
+        }
+      }
+      button {
+        font-family: "Inknut Antiqua", serif;
+        font-size: 1.1rem;
+        align-self: center;
+        background-color: black;
+        color: white;
+        width: 90%;
+        padding: 0rem 1rem;
+        border: 4px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(
+          45deg,
+          #f093fb,
+          #f5576c,
+          #4facfe,
+          #43e97b
+        );
+        cursor: pointer;
+        transition: background 0.5s ease, color 0.5s ease;
+        position: relative;
+        z-index: 1;
+      }
+
+      button:hover {
+        background: linear-gradient(45deg, #f093fb, #f5576c, #4facfe, #43e97b);
+        color: black;
+      }
+    }
+  }
+}
+
+#contact {
+  min-height: 100vh;
+  #flex-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    #contact-form {
+      width: 20rem;
+      height: fit-content;
+      background: rgba(255, 255, 255, 0.1);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      form {
+        font-family: "Inknut Antiqua", serif;
+        align-items: center;
+        label {
+          color: white;
+          text-transform: capitalize;
+        }
+        select,
+        textarea {
+          cursor: pointer;
+        }
+        input,
+        select,
+        textarea {
+          padding: 0.8rem;
+          border-radius: 8px;
+          border: 2px solid rgba(255, 255, 255, 0.2);
+          background: rgba(255, 255, 255, 0.1);
+          color: black;
+          margin-bottom: 1rem;
+          transition: all 0.3s ease;
+        }
+        .input-container {
+          display: flex;
+          justify-content: space-between;
+        }
+        button {
+          width: 10rem;
+          font-family: "Inknut Antiqua", serif;
+          background-color: black;
+          color: white;
+          padding: 0rem 1rem;
+          border: 4px solid;
+          border-image-slice: 1;
+          border-image-source: linear-gradient(
+            45deg,
+            #f093fb,
+            #f5576c,
+            #4facfe,
+            #43e97b
+          );
+          cursor: pointer;
+          transition: background 0.5s ease, color 0.5s ease;
+          position: relative;
+          z-index: 1;
+          display: block;
+          margin: 1rem auto;
+        }
+
+        button:hover {
+          background: linear-gradient(
+            45deg,
+            #f093fb,
+            #f5576c,
+            #4facfe,
+            #43e97b
+          );
+          color: black;
+        }
+      }
+    }
+    .menu {
+      z-index: 5;
+      position: absolute;
+      top: 70%;
+      left: 20%;
+    }
+
+    .toggle {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: #333;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: transform 0.5s;
+    }
+
+    .social-links {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+    }
+
+    .social-links li {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: rotate(calc(90deg * var(--i))) translateX(80px);
+      transform-origin: 25px 25px;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
+    }
+
+    .menu.active .social-links li {
+      transform: rotate(calc(90deg * var(--i))) translateX(80px) scale(1);
+      opacity: 1;
+    }
+
+    .social-links li a {
+      width: 3rem;
+      height: 3rem;
+      background: rgba(0, 0, 0, 0.308);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+    #contact-infos {
+      position: relative;
+      min-height: 100vh;
+      #appareil-photo {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 18rem;
+        height: 18rem;
+        border-radius: 100%;
+        object-fit: cover;
+      }
+      #map {
+        z-index: 1;
+        position: absolute;
+        border-radius: 20px;
+        width: 10rem;
+        height: 10rem;
+        right: 5%;
+        top: 10%;
+      }
     }
   }
 }

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./asset/style/style.css" />
+    <title>Photography | Contact</title>
+  </head>
+  <body>
+    <div class="englob">
+    <header>
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li>
+            <a href="./index.html"
+              ><img src="./asset/img/Logo.svg" alt="Logo"
+            /></a>
+          </li>
+          <li><a href="./galerie.html"><i class="fa-solid fa-images"></i></a></li>
+          <li><a href="./contact.html"><i class="fa-solid fa-envelope"></i></a></li>
+          <li>
+            <a href="#"
+              ><img
+                id="profile"
+                src="./asset/img/profile.svg"
+                alt="Photo de la photographe"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="contact">
+      <div id="txt-head">
+        <h2>Contactez-moi</h2>
+      </div>
+      <div id="flex-contact">
+        <section id="contact-form">
+          <form action="POST" id="form-contact">
+            <div class="input-container">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="input-container">
+              <label for="surname">Prénom</label>
+              <input type="text" id="surname" name="surname" required />
+            </div>
+            <div class="input-container">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="input-container">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <div class="input-container">
+              <label for="seance">séance</label>
+              <select id="seance" name="seance" required>
+                <option value="" disabled selected>Choisir</option>
+                <option value="seance1">
+                  Séance 1 : 150€ 30min | 10 photos
+                </option>
+                <option value="seance2">Séance 2 : 250€ 1h | 20 photos</option>
+                <option value="seance3">Séance 3 : 350€ 2h | 40 photos</option>
+              </select>
+            </div>
+            <div class="input-container">
+              <label for="occasion">occasion</label>
+              <select id="occasion" name="occasion" required>
+                <option value="" disabled selected>Choisir</option>
+                <option value="mariage">Mariage</option>
+                <option value="grossesse">Grossesse</option>
+                <option value="naissance">Naissance</option>
+                <option value="confiance">Confiance en soi</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            <div class="input-container">
+              <label for="message">Explication du projet</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Envoyer</button>
+          </form>
+        </section>
+        <section>
+          <div class="menu">
+            <div class="toggle">
+              <ion-icon name="share-social"></ion-icon>
+            </div>
+            <ul class="social-links">
+              <li style="--i: 0;">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li style="--i: 1; ">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li style="--i: 2; ">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li style="--i: 3; ">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <div id="contact-infos">
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d568.9244343623501!2d4.928984286130561!3d45.71954506494292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x47f4c39019b66e5b%3A0x59e7d92685d1b349!2s3%20Brasseurs%20Lyon%20-%20Saint%20Priest!3m2!1d45.7194682!2d4.9297349!5e0!3m2!1sfr!2sfr!4v1746600953118!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <img
+              id="appareil-photo"
+              src="./asset/img/photo-1580707221190-bd94d9087b7f.jpg"
+              alt="appareil à photo"
+            />
+          </div>
+        </section>
+      </div>
+    </main></div>
+    <script src="./asset/js/contact.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
